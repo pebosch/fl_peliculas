@@ -1,4 +1,5 @@
 import 'package:fl_peliculas/widgets/widgets.dart';
+import 'package:fl_peliculas/models/models.dart';
 import 'package:flutter/material.dart';
 
 class DetailsScreen extends StatelessWidget {
@@ -6,6 +7,9 @@ class DetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Result movie = ModalRoute.of(context)!.settings.arguments as Result;
+    print(movie.title);
+
     return Scaffold(
         body: CustomScrollView(
       slivers: [
